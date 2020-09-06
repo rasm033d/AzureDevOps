@@ -6,13 +6,6 @@
 trigger:
 - master
 
-pool:
-  vmImage: 'windows-latest'
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
 task: PowerShell@2
   inputs:
-    filePath: <powershell script>
+    filePath: '$(System.DefaultWorkingDirectory)/SetIP.ps1'
